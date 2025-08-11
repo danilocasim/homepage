@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  background-color: rgb(19, 115, 206);
+  height: calc(80% - 1vw);
+  width: 100vw;
+  transform: translateY(-40%) skewY(-10deg);
+  z-index: -1;
+}
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+h1 {
+  font-size: clamp(2rem, 4vw, 6rem);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container-items {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.container-items img {
+  height: 300px;
+}
+
+.container-items .row {
+  gap: 1rem;
+}
+
+.profile {
+  max-width: 40%;
+}
+
+.familyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.familyContainer img {
+  width: max(80vw);
+}
+.form-control {
+  border: 1px solid black;
+}
+
+.form-control:focus {
+  border: 3px solid black;
+  box-shadow: none;
+}
+
+button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: rgb(19, 115, 206);
+  color: white;
+  border: none;
+}
+
+@media (max-width: 993px) {
+  .profileContainer.col h1 {
+    color: white;
+  }
+}
+
+@media (max-width: 404px) {
+  .hobbiesContainer h1 {
+    color: white;
+  }
+}
